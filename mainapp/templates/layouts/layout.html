@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- Header  -->
     <header>
         <div class="contenedor">
             <div class="barra-header">
@@ -37,11 +38,15 @@
             </div>
         </div>
     </header>
+    <!-- Menu  -->
     <div class="contenedor">
         <nav>
             <ul>
                 <li>
                     <a href="{% url 'index' %}">Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url 'noticias' %}">Noticias</a>
                 </li>
             </ul>
         </nav>
@@ -59,7 +64,6 @@
         <div class="contenido-principal">
             <!-- noticias  -->
             <main class="noticias">
-                <h2>Noticias</h2>
                 {% block news %}
                 {% endblock%}
             </main>

@@ -1,0 +1,28 @@
+<!-- Lista de noticias  -->
+<section class="noti-antiguas">
+    {% for n in noticias %}
+    {% if noticias|length is not n.id %}
+    <div class="noti-secundarias">
+        {% if n.imagen != 'null' and n.imagen.url|length >= 1 %}
+        <img src="{{n.imagen.url}}" alt="kodbox">
+        {% endif %}
+        <div>
+            <div class="titulo">{{ n.titulo }}</div>
+            <div class="clearfix"></div>
+            <div class="subtitulo">
+                {{ n.subtitulo }}
+                <div class="clearfix"></div>
+                <div class="fecha">
+                    {{ n.creado_el }}
+                    {{ n.usuario }}
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="boton">
+                <a href="#">IR</a>
+            </div>
+        </div>
+    </div>
+    {% endif%}
+    {% endfor %}
+</section>
