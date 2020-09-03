@@ -1,0 +1,38 @@
+{% extends 'layouts/layout.html'%}
+<!-- Titulo de la ventanada  -->
+{% block title %}
+{{ noticia.titulo }}
+{% endblock %}
+<!-- Comienza el contenido  -->
+<!-- Noticiaa  ---------------- -->
+{% block news %}
+
+{% if noticia_principal.imagen != 'null' and noticia_principal.imagen.url|length >= 1 %}
+    <img src="{{noticia.imagen.url}}" alt="kodbox">
+{% endif %}
+{{ noticia.titulo }}
+<br>
+{{ noticia.subtitulo }}
+<br>
+{{ noticia.usuario.first_name }} | {{ noticia.creado_el}}
+<br>
+{% for categoria in noticia.categorias.all %}
+{{ categoria }}
+{% endfor %}
+<br>
+{{ noticia.contenido|safe }}
+
+
+{% endblock %}
+<!-- Categorias --------------------- -->
+{% block category %}
+<!-- For para ver las categorias  -->
+{% comment 'Esto a un esta en prueba'%}
+{% for categoria in categorias %}
+<ul>
+    <li>{{categoria.1}}</li>
+</ul>
+{% endfor%}
+{% endcomment %}
+
+{% endblock %}

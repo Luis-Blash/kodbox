@@ -1,7 +1,6 @@
 <!-- Lista de noticias  -->
 <section class="noti-antiguas">
-    {% for n in noticias %}
-    {% if noticias|length is not n.id %}
+    {% for n in noticias_secundarias %}
     <div class="noti-secundarias">
         {% if n.imagen != 'null' and n.imagen.url|length >= 1 %}
         <img src="{{n.imagen.url}}" alt="kodbox">
@@ -19,10 +18,9 @@
             </div>
             <div class="clearfix"></div>
             <div class="boton">
-                <a href="#">IR</a>
+                <a href="{% url 'noticia' n.id %}">IR</a>
             </div>
         </div>
     </div>
-    {% endif%}
     {% endfor %}
 </section>

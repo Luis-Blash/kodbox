@@ -31,7 +31,7 @@ class Noticias(models.Model):
     class Meta:
         verbose_name = "Noticia"
         verbose_name_plural = "Noticias"
-        ordering =  ['-creado_el']
+        #ordering =  ['-creado_el']
 
     def __str__(self):
-        return self.titulo + " | " + self.subtitulo
+        return self.titulo
