@@ -26,13 +26,6 @@
 {% endblock %}
 <!-- Categorias --------------------- -->
 {% block category %}
-<!-- For para ver las categorias  -->
-{% comment 'Esto a un esta en prueba'%}
-{% for categoria in categorias %}
-<ul>
-    <li>{{categoria.1}}</li>
-</ul>
-{% endfor%}
-{% endcomment %}
-
+<!-- Menu categorias  -->
+{% include 'categorias/menu_categorias.html'%}
 {% endblock %}

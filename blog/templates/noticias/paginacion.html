@@ -1,0 +1,12 @@
+<h2>Paginacion</h2>
+{% if noticias_secundarias.has_previous %}
+<a href="?page=1">Primero</a>
+<a href="?page={{ noticias_secundarias.previous_page_number }}">Anterior</a>
+{% endif %}
+<span>
+    Pagina {{ noticias_secundarias.number }} de {{noticias_secundarias.paginator.num_pages}}
+</span>
+{% if noticias_secundarias.has_next %}
+<a href="?page={{ noticias_secundarias.next_page_number }}">Siguiente</a>
+<a href="?page={{ noticias_secundarias.paginator.num_pages}}">Ultima</a>
+{% endif %}

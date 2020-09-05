@@ -1,24 +1,25 @@
 {% extends 'layouts/layout.html'%}
 <!-- Titulo de la ventanada  -->
 {% block title %}
-{{title}}
+{{categoria.nombre}}
 {% endblock %}
+
+
 <!-- Comienza el contenido  -->
 <!-- Noticias  ---------------- -->
 {% block news %}
-<h1>{{ title }}</h1>
-
+<h1>{{ categoria.nombre }}</h1>
+<h2>{{ categoria.descripcion }} </h2>
 <!-- Noticia principal  -->
 {% include 'noticias/noticia-principal.html'%}
-
 <!-- Noticias secundarias  -->
 {% include 'noticias/noti-secundarias.html'%}
-
 <!-- Paginacion  -->
 {% include 'noticias/paginacion.html'%}
 
-
 {% endblock %}
+
+
 <!-- Categorias --------------------- -->
 {% block category %}
 <!-- Menu categorias  -->
