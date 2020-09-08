@@ -8,7 +8,7 @@
 <!-- Comienza el contenido  -->
 <!-- Noticias  ---------------- -->
 {% block news %}
-<h1>{{ categoria.nombre }}</h1>
+<h1>{{ categoria.nombre|upper }}</h1>
 <h2>{{ categoria.descripcion }} </h2>
 <!-- Noticia principal  -->
 {% include 'noticias/noticia-principal.html'%}
@@ -16,13 +16,5 @@
 {% include 'noticias/noti-secundarias.html'%}
 <!-- Paginacion  -->
 {% include 'noticias/paginacion.html'%}
-
-{% endblock %}
-
-
-<!-- Categorias --------------------- -->
-{% block category %}
-<!-- Menu categorias  -->
-{% include 'categorias/menu_categorias.html'%}
 
 {% endblock %}

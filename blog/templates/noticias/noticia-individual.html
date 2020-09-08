@@ -6,26 +6,27 @@
 <!-- Comienza el contenido  -->
 <!-- Noticiaa  ---------------- -->
 {% block news %}
+<!-- noticia individual  -->
+<div class="noticia-individual">
+    <div class="imagen">
+        {% if noticia.imagen != 'null' and noticia.imagen.url|length >= 1 %}
+        <img src="{{noticia.imagen.url}}" alt="kodbox">
+        {% endif %}
+    </div>
 
-{% if noticia_principal.imagen != 'null' and noticia_principal.imagen.url|length >= 1 %}
-    <img src="{{noticia.imagen.url}}" alt="kodbox">
-{% endif %}
-{{ noticia.titulo }}
-<br>
-{{ noticia.subtitulo }}
-<br>
-{{ noticia.usuario.first_name }} | {{ noticia.creado_el}}
-<br>
-{% for categoria in noticia.categorias.all %}
-{{ categoria }}
-{% endfor %}
-<br>
-{{ noticia.contenido|safe }}
-
-
-{% endblock %}
-<!-- Categorias --------------------- -->
-{% block category %}
-<!-- Menu categorias  -->
-{% include 'categorias/menu_categorias.html'%}
+    <h1>{{ noticia.titulo }}</h1>
+    <h2>{{ noticia.subtitulo }}</h2>
+    <div class="fecha">
+        <span class="nombre">{{ noticia.usuario.first_name }}</span> |
+        <span>{{ noticia.creado_el}}</span>
+    </div>
+    <div class="categoria">
+        {% for categoria in noticia.categorias.all %}
+        <a href="{% url 'categoria' categoria.id %}">{{ categoria }}</a>
+        {% endfor %}
+    </div>
+    <div class="contenido-noticia">
+        {{ noticia.contenido|safe }}
+    </div>
+</div>
 {% endblock %}

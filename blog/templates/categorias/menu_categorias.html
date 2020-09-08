@@ -1,5 +1,5 @@
+<ul class="menu-categorias">
 {% for categoria in categorias %}
-<ul>
-    <li><a href="{% url 'categoria' categoria.0 %}">{{categoria.1}}</a> </li>
-</ul>
+    <li><a href="{% url 'categoria' categoria.0 %}">{{categoria.1|upper}}</a> </li>
 {% endfor%}
+</ul>

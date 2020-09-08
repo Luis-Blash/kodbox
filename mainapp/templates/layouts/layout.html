@@ -12,6 +12,9 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- fontaweson -->
     <script src="https://kit.fontawesome.com/b61be4fabc.js" crossorigin="anonymous"></script>
+    <!-- Fonts Google  -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <!-- Mi CSS  -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -70,10 +73,18 @@
             <!-- categorias -->
             <aside class="categorias">
                 <h2>Categorias</h2>
-                {% block category %}
-                {% endblock %}
-            </aside> 
-        
+                <form class="buscador" action="POST">
+                    <input type="text" placeholder="Busca noticias" name="buscar">
+                    <input type="submit" value="guardar">
+                </form>
+                {% include 'categorias/menu_categorias.html'%}
+                <ul class="redes">
+                    <li><a href="https://www.facebook.com/KodBoxCode"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://twitter.com/KodboX_"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCoEIYAsPco1b1AKyDDVi3fg"><i
+                                class="fab fa-youtube"></i></a></li>
+                </ul>
+            </aside>
         </div>
     </div>
     <div class="clearfix"></div>
