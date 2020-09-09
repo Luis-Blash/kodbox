@@ -1,0 +1,28 @@
+{% extends 'layouts/layout.html'%}
+<!-- Titulo de la ventanada  -->
+{% block title %}
+{{title}}
+{% endblock %}
+<!-- Comienza el contenido  -->
+<!-- Noticias  ---------------- -->
+{% block news %}
+<h1>{{ title }}</h1>
+
+{% for noticia in noticas_busquedas%}
+{% if noticia.imagen != 'null' and noticia.imagen.url|length >= 1 %}
+<img src="{{noticia.imagen.url}}" alt="kodbox">
+{% endif %}
+<br>
+{{ noticia.titulo }}
+<br>
+{{ noticia.subtitulo }}
+<br>
+{{ noticia.usuario }}
+<br>
+{{ noticia.creado_el }}
+<br>
+<a href="{% url 'noticia' noticia.id%}">ir</a>
+<hr>
+{% endfor%}
+
+{% endblock %}

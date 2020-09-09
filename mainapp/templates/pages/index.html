@@ -4,7 +4,29 @@
 Index
 {% endblock %}
 <!-- Comienza el contenido  -->
-<!-- Noticias  -->
 {% block news %}
-<h1>{{ title }}</h1>
+{% load static %}
+<div class="inicio">
+    <h1>{{ title }}</h1>
+    <img src="{% static 'img/kodbox-logo.png'%}" alt="Logo kodbox">
+    <div>
+        <p>
+            Bienvenidos a nuestra pagina web de noticias, donde encontraras articulos interesantes sobre
+            los
+            lenguajes de
+            programacion, que sucede con la tecnologia hoy en dia, que puedes aprender hoy, entre otras
+            cosas.
+        </p>
+        <p>
+            Puedes pasarte por nuestro canal youtube para aprender nuevas cosas, hay cursos, sobre
+            programación
+            y datos curisos
+            para poder aprender algo nuevo visita <a
+                href="https://www.youtube.com/channel/UCoEIYAsPco1b1AKyDDVi3fg">KODBOX</a>
+        </p>
+        <p>
+            <a href="{% url 'noticias' %}">¿Qué hay de nuevo?</a>
+        </p>
+    </div>
+</div>
 {% endblock %}

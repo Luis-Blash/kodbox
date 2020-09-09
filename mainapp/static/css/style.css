@@ -160,6 +160,72 @@ nav>ul>li>a:hover {
     padding: 10px;
 }
 
+/** inicio -------------- **/
+.inicio,
+.sobre-nosotros {
+    width: 90%;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.inicio>h1,
+.sobre-nosotros>h1 {
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 20px;
+}
+
+.inicio>img {
+    width: 200px;
+    float: left;
+    border-radius: 150px;
+}
+
+.inicio> div{
+    padding-left: 220px;
+    margin-top: 28px;
+}
+.inicio>div>p {
+    line-height: 22px;
+    font-family: "Play",sans-serif;
+    font-size: 18px;
+}
+
+.inicio>div>p>a{
+    text-decoration: none;
+    color: #000000;
+    transition: all 350ms ease;
+}
+
+.inicio>div>p>a:hover{
+    color: #df655c;
+}
+
+/** sobre-nosostros -------------- **/
+.sobre-nosotros>div>img{
+    width: 200px;
+    float: right;
+}
+
+.sobre-nosotros>div>div{
+    padding-top: 70px;
+    padding-left: 85px;
+}
+
+.sobre-nosotros>div.texto{
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.sobre-nosotros>p{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+
 /** noti-principal ---***--- **/
 .noti-principal {
     border: 1px solid #000000;
@@ -278,11 +344,11 @@ nav>ul>li>a:hover {
 }
 
 /** Paginacion --------------------------- **/
-.paginacion{
+.paginacion {
     text-align: center;
 }
 
-.paginacion>a{
+.paginacion>a {
     text-decoration: none;
     font-size: 18px;
     padding: 0 15px;
@@ -291,16 +357,17 @@ nav>ul>li>a:hover {
     transition: all 300ms ease;
 }
 
-.paginacion>a:hover{
+.paginacion>a:hover {
     color: #610905;
     font-size: 20px;
 }
 
-.paginacion> span{
+.paginacion>span {
     font-family: 'Play', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
+
 /** categorias *------------------  **/
 .categorias {
     flex-basis: calc(19.2% - 0.5rem);
@@ -397,7 +464,7 @@ ul.redes>li>a:hover {
     color: #610905;
 }
 
-ul.redes>li:hover{
+ul.redes>li:hover {
     font-size: 60px;
 }
 

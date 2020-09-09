@@ -51,6 +51,9 @@
                 <li>
                     <a href="{% url 'noticias' %}">Noticias</a>
                 </li>
+                <li>
+                    <a href="{% url 'sobre nosotros' %}">Sobre nosotros</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -73,8 +76,10 @@
             <!-- categorias -->
             <aside class="categorias">
                 <h2>Categorias</h2>
-                <form class="buscador" action="POST">
-                    <input type="text" placeholder="Busca noticias" name="buscar">
+                
+                <form class="buscador" action="{% url 'buscar' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Titulo de la noticia" name="titulo">
                     <input type="submit" value="guardar">
                 </form>
                 {% include 'categorias/menu_categorias.html'%}

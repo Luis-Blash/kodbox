@@ -1,0 +1,37 @@
+{% extends 'layouts/layout.html'%}
+<!-- Titulo de la ventanada  -->
+{% block title %}
+Index
+{% endblock %}
+<!-- Comienza el contenido  -->
+{% block news %}
+{% load static %}
+<div class="sobre-nosotros">
+    <h1>{{ title }}</h1>
+    <div>
+        <img src="{% static 'img/innovation.png'%}" alt="Inovacion">
+        <div>
+            <p>
+                Somos un pequeño proyecto nacido para la enseñanza en la area de programacion, las
+                nuevas
+                tecnologias de hoy en dia,
+                como puedes usarlas para tus propios proyectos. Puedes aprender algun nuevo lenguaje de
+                programacion, o alguna idea
+                para poder empezar.
+            </p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="texto">
+        <p>
+            Tenemos canal de youtube donde subimos lo que sabemos y que te puede ser de utilidad,
+            estamos en
+            twitter y Facebook
+            para enterarte de lo nuevo que hemos subido
+        </p>
+    </div>
+    <p>
+        "Que esperas unete, no te arrepentirás"
+    </p>
+</div>
+{% endblock %}

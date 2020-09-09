@@ -4,5 +4,10 @@ from django.shortcuts import render
 
 def index(request):
     return render(request,"pages/index.html",{
-        'title': 'Index'
+        'title': 'Bienvenido'
+    })
+
+def sobre_nosotros(request):
+    return render(request, "pages/sobre-nosotros.html",{
+        "title":"Sobre nosotros"
     })
