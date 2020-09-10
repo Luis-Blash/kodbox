@@ -7,10 +7,8 @@ from blog.models import Noticias, Categoria
 
 def noticias(request):
 
-    noticias_secundarias = Noticias.objects.filter(
-        publico=True).order_by("-creado_el")[1:]
-    noticia_principal = Noticias.objects.filter(
-        publico=True).order_by("-creado_el").first()
+    noticias_secundarias = Noticias.objects.filter(publico=True).order_by("-creado_el")[1:]
+    noticia_principal = Noticias.objects.filter(publico=True).order_by("-creado_el").first()
     # paginar noticias, que es cuantas mostrar
     paginacion = Paginator(noticias_secundarias, 2)
     # recoger numero de la pagina
@@ -41,10 +39,8 @@ def categorias(request, categoria_id):
 
     categorias_individual = get_object_or_404(Categoria, id=categoria_id)
 
-    noticia_principal = Noticias.objects.filter(
-        publico=True, categorias=categoria_id).order_by("-creado_el").first()
-    noticias_secundarias = Noticias.objects.filter(
-        publico=True, categorias=categoria_id).order_by("-creado_el")[1:]
+    noticia_principal = Noticias.objects.filter(publico=True, categorias=categoria_id).order_by("-creado_el").first()
+    noticias_secundarias = Noticias.objects.filter(publico=True, categorias=categoria_id).order_by("-creado_el")[1:]
 
     # Paginacion
     paginacion = Paginator(noticias_secundarias, 2)
@@ -65,8 +61,7 @@ def buscar_noticia(request):
     if request.method == 'POST':
         titulo = request.POST['titulo']
 
-        noticas_busqueda = Noticias.objects.filter(
-            titulo__contains=titulo).order_by("-creado_el")
+        noticas_busqueda = Noticias.objects.filter(titulo__contains=titulo,publico=True).order_by("-creado_el")
     
     return render(request, "noticias/noticias-buscadas.html", {
         "title": "Resultados",

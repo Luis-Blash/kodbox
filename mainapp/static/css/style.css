@@ -503,7 +503,7 @@ ul.redes>li:hover {
     color: gray;
 }
 
-.noticia-individual>.fecha>.nombre {
+.noticia-individual>.fecha>.nombre{
     text-transform: uppercase;
 }
 
@@ -526,6 +526,74 @@ ul.redes>li:hover {
     color: #000000;
     font-size: 15px;
 
+}
+
+/** noticias buscadas **/
+.noticias-buscadas{
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 85%;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0px 50px;
+    box-shadow: 0 0 3px #000000;
+}
+.noticias-buscadas>h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    padding-left: 70px;
+}
+
+.noticias-buscadas> img{
+    width: 150px;
+    float: left;
+}
+
+.noticias-buscadas>div{
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.noticias-buscadas>div>.datos h2{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 25px;
+    padding-left: 8px;
+}
+
+.noticias-buscadas>div>.datos p{
+    font-family: 'Play', sans-serif;
+    font-size: 15px;
+    color: gray;
+}
+.noticias-buscadas>div>.datos p>span {
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.noticias-buscadas>div>.boton{
+    border: 1px solid #000000;
+    border-radius: 15px;
+    width: 80px;
+    text-align: center;
+    background-color: #de796b;
+    transition: all 400ms ease;
+}
+
+.noticias-buscadas>div>.boton:hover{
+    background-color: #da5644;
+}
+
+.noticias-buscadas>div>.boton>a{
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
+.noticias-buscadas>div>.boton>a:hover{
+    color: #bbbbbb;
 }
 
 /** FOOTER -----------------------------------**/

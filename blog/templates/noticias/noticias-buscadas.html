@@ -6,23 +6,25 @@
 <!-- Comienza el contenido  -->
 <!-- Noticias  ---------------- -->
 {% block news %}
-<h1>{{ title }}</h1>
-
+<h1>{{title}}</h1>
 {% for noticia in noticas_busquedas%}
-{% if noticia.imagen != 'null' and noticia.imagen.url|length >= 1 %}
-<img src="{{noticia.imagen.url}}" alt="kodbox">
-{% endif %}
-<br>
-{{ noticia.titulo }}
-<br>
-{{ noticia.subtitulo }}
-<br>
-{{ noticia.usuario }}
-<br>
-{{ noticia.creado_el }}
-<br>
-<a href="{% url 'noticia' noticia.id%}">ir</a>
-<hr>
+<div class="noticias-buscadas">
+    <h1>{{ noticia.titulo }}</h1>
+    {% if noticia.imagen != 'null' and noticia.imagen.url|length >= 1 %}
+    <img src="{{noticia.imagen.url}}" alt="kodbox">
+    {% endif %}
+    <div>
+        <div class="datos">
+            <h2>{{ noticia.subtitulo }}</h2>
+            <p>
+                <span>{{ noticia.usuario }}</span> |
+                {{ noticia.creado_el }}
+            </p>
+        </div>
+        <div class="boton">
+            <a href="{% url 'noticia' noticia.id%}">ir</a>
+        </div>
+    </div>
+</div>
 {% endfor%}
-
 {% endblock %}
