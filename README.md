@@ -25,8 +25,9 @@ python manage.py runserver
 ## Inico y sobre nosotros
 Primero que nada da la bienvenida a la pagina principal
 <br>
-<img src="https://github.com/Luis-Blash/kodbox/tree/master/github/Bienvenida.png" alt="">
+<img src="github/Bienvenida.png" alt="Bienvenido">
 <hr>
+<img src="github/sobre.png" alt="Sobre Nosotros">
 <br>
 
 ## Noticias
@@ -37,11 +38,17 @@ Se divide en Noticia principal, noticias secuandarios
 ### Noticias Individual
 Cada noticia te lleva a su contenido
 <br>
+<img src="github/noticiaIndividual.png" alt="Noticias Individual">
+<br>
 
 ### Categorias
 Usando las categorias de cada una de las Noticias, puede llevarte a la lista de solo las noticias por categorias.
 <br>
+<img src="github/porCategorias.png" alt="Categorias">
+<br>
 
 ### Busquedas
 La busqueda funciona por un metodo post, la cual busca todas las noticias publicas y que en su nombre venga esa palabra
+<br>
+<img src="github/porBusqueda.png" alt="Busquedas">
 <br>
