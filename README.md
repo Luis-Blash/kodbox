@@ -24,25 +24,24 @@ python manage.py runserver
 
 ## Inico y sobre nosotros
 Primero que nada da la bienvenida a la pagina principal
-![Inicio](https://github.com/Luis-Blash/kodbox/tree/master/github/Bienvenida.png)
 
+<img height="500" src="https://github.com/Luis-Blash/kodbox/tree/master/github/Bienvenida.png" alr"Inicio">
 <hr>
-
-![Sobre](https://github.com/Luis-Blash/kodbox/tree/master/github/sobre.png)
+<img height="500" src="https://github.com/Luis-Blash/kodbox/tree/master/github/sobre.png" alr"Sobre nosotros">
 
 ## Noticias
 En la pagina de ***Noticias*** tenemos la muestra del titulo, subtitulo, imagen y el dia de creacion, con el boton de ir.
 Se divide en Noticia principal, noticias secuandarios
-![bienvenida](https://github.com/Luis-Blash/kodbox/tree/master/github/noticias.png)
+<img height="500" src="https://github.com/Luis-Blash/kodbox/tree/master/github/noticias.png" alr"Noticias">
 
 ### Noticias Individual
 Cada noticia te lleva a su contenido
-![Noticia Individual](https://github.com/Luis-Blash/kodbox/tree/master/github/noticiaIndividual.png)
+<img height="500" src="https://github.com/Luis-Blash/kodbox/tree/master/github/noticiaIndividual.png" alr"Noticias Individual">
 
 ### Categorias
 Usando las categorias de cada una de las Noticias, puede llevarte a la lista de solo las noticias por categorias.
-![Por categoria](https://github.com/Luis-Blash/kodbox/tree/master/github/porCategorias.png)
+<img height="500" src="https://github.com/Luis-Blash/kodbox/tree/master/github/porCategorias.png" alr"Categorias">
 
 ### Busquedas
 La busqueda funciona por un metodo post, la cual busca todas las noticias publicas y que en su nombre venga esa palabra
-![Por categoria](https://github.com/Luis-Blash/kodbox/tree/master/github/porBusqueda.png)
+<img height="500" src="https://github.com/Luis-Blash/kodbox/tree/master/github/porBusqueda.png" alr"Busquedas">
