@@ -8,6 +8,8 @@
 {% block news %}
 <h1>{{ title }}</h1>
 
+{% if noticia_principal != none %}
+
 <!-- Noticia principal  -->
 {% include 'noticias/noticia-principal.html'%}
 
@@ -17,4 +19,5 @@
 <!-- Paginacion  -->
 {% include 'noticias/paginacion.html'%}
 
+{% endif %}
 {% endblock %}
