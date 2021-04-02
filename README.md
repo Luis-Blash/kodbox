@@ -9,13 +9,6 @@ pip install -r requirements.txt
 ```
 
 ## En ejecucion 🖥
-Una vez instalado vamos a ir a 
-
-Un proyecto de practica usando Django, para la creacion de una web de noticias, usuando como ejemplo [KODBOX](https://www.youtube.com/channel/UCoEIYAsPco1b1AKyDDVi3fg), una canl creado para la enseñanza en programación y tecnologia.
-
-Primero para empezar necesitamos instalar lo que necesitamos
-
-
 Una vez instalado vamos a ir a `manage.py`, el cual vamos a hacer la migracion y un super usuario
 
 ```bash
