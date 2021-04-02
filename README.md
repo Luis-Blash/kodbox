@@ -1,26 +1,37 @@
-# kodbox
+# kodbox 🗂
+> Crea blog de noticias de programación.
+
+## Pre-requisitos 🔧
+Necesitamos instalar
+
+```bash
+pip install -r requirements.txt
+```
+
+## En ejecucion 🖥
+Una vez instalado vamos a ir a 
 
 Un proyecto de practica usando Django, para la creacion de una web de noticias, usuando como ejemplo [KODBOX](https://www.youtube.com/channel/UCoEIYAsPco1b1AKyDDVi3fg), una canl creado para la enseñanza en programación y tecnologia.
 
 Primero para empezar necesitamos instalar lo que necesitamos
-```	
-pip install -r requirements.txt
-```
 
-Una vez instalado vamos a ir a manage.py, el cual vamos a hacer la migracion y un super usuario
 
-```python
-python3 manage.py migrate
-python3 manage.py createsuperuser
+Una vez instalado vamos a ir a `manage.py`, el cual vamos a hacer la migracion y un super usuario
+
+```bash
+python manage.py migrate
+python manage.py createsuperuser
 
 ```
-y para terminar vamos a correr el servidor
+### Ejecutar ⚒
 
-```python
+```bash
 
 python manage.py runserver
 
 ```
+
+## Rutas 🔰
 
 ## Inico y sobre nosotros
 Primero que nada da la bienvenida a la pagina principal
@@ -52,3 +63,13 @@ La busqueda funciona por un metodo post, la cual busca todas las noticias public
 <br>
 <img src="github/porBusqueda.png" alt="Busquedas">
 <br>
+
+## Construido con: 🛠
+
+La herramienta utiliza para su creacion
+
+* [Django](https://www.djangoproject.com/) - Framework de python
+
+## Autor
+* **Luis Ocampo** - *Programador* - [luisblash3](https://twitter.com/luisblash3)
+
